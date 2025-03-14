@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comingsoon-3-blue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section class="coming-soon-3-container-blue text-center">
+    <div class="container text-center">
+        <div class="">
+            <div class="coming-soon-3-logo-blue">
+                <img src="./assets/logo-blue.svg" alt="Nixie"> <!-- Replace with actual logo -->
+            </div>
+        </div>
+        
+        <h1 class="coming-soon-3-title-blue">COMING SOON</h1>
+
+        <div class="coming-soon-3-countdown-blue">
+            <div>
+                <span id="days">17</span>
+                <small>Days</small>
+            </div>
+            <div>
+                <span id="hours">24</span>
+                <small>Hours</small>
+            </div>
+            <div>
+                <span id="minutes">54</span>
+                <small>Minutes</small>
+            </div>
+            <div>
+                <span id="seconds">30</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+        
+        <div class="subscribe-box-blue mt-4">
+            <p class="notified-blue">Get notified when we launch</p>
+            
+                <div class="input-group input-group-blue d-flex">
+                    <span class="input-group-text input-group-text-blue bg-white">
+                        <i class="bi bi-envelope text-primary"></i> <!-- Email Icon -->
+                    </span> 
+                    
+                    <input type="email" class="form-control" placeholder="Email address">
+                    <button class="btn btn-danger ms-4">Notify Me →</button>
+                
+                </div>
+           
+            <p class="small-text-blue">*Don’t worry we will not spam you 😊</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Countdown Timer Logic
+    function startCountdown() {
+        let countDownDate = new Date("Apr 10, 2025 00:00:00").getTime();
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+            
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "<h3>We have launched!</h3>";
+            }
+        }, 1000);
+    }
+    startCountdown();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
