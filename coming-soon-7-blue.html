@@ -47,21 +47,47 @@
         </div>
     </div>
 </section>
-    <script>
+<script>
+        
+    function startCountdown(targetDate) {
         function updateCountdown() {
-            let launchDate = new Date("Apr 30, 2025 00:00:00").getTime();
-            let now = new Date().getTime();
-            let timeLeft = launchDate - now;
-            
-            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours;
-            document.getElementById("minutes").innerText = minutes;
+            const now = new Date();
+            const timeRemaining = targetDate - now;
+    
+            if (timeRemaining <= 0) {
+                clearInterval(countdownInterval);
+                return;
+            }
+    
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    
+            // Update digits in the HTML
+            document.getElementById("day1").textContent = Math.floor(days / 10);
+            document.getElementById("day2").textContent = days % 10;
+    
+            document.getElementById("hour1").textContent = Math.floor(hours / 10);
+            document.getElementById("hour2").textContent = hours % 10;
+    
+            document.getElementById("min1").textContent = Math.floor(minutes / 10);
+            document.getElementById("min2").textContent = minutes % 10;
         }
-        setInterval(updateCountdown, 1000);
-    </script>
+    
+        // Update every second to detect when a new minute starts
+        const countdownInterval = setInterval(() => {
+            const now = new Date();
+            if (now.getSeconds() === 0) {
+                updateCountdown();
+            }
+        }, 1000);
+    
+        updateCountdown(); // Run once immediately
+    }
+    
+    // Set the target launch date (Change this to your desired date)
+    const launchDate = new Date("2025-06-01T00:00:00");
+    startCountdown(launchDate);
+</script>
 </body>
 </html>
