@@ -6,6 +6,108 @@ body {
     padding: 0;
 }
 
+/* dashboard */
+
+
+.template-card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.template-card:hover {
+    transform: scale(1.05);
+}
+
+.template-preview {
+ aspect-ratio: 16 / 9; /* Makes it responsive without height */
+ background: #ddd;
+ border-radius: 5px;
+ margin-bottom: 10px;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ transition: opacity 0.3s;
+ }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.template-card:hover .overlay {
+    opacity: 1;
+}
+
+.btn-custom {
+    background: white;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: #007bff;
+    color: white;
+}
+
+.coming-soon-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+.dashboard-logo{
+
+    margin-bottom: 10px;
+}
+.dashboard-heading {
+    font-size: 44px;
+font-weight: 700;
+margin-top: 10px;
+font-family: 'Poppins', sans-serif;
+}
+.template-text {
+    color: #0056b3; /* Blue color */
+    font-size: 44px;
+font-weight: 700;
+margin-top: 10px;
+font-family: 'Poppins', sans-serif;
+}
+.btn-primary {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.dashboard-subtitle {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #666;
+font-weight: 400;
+margin-top: 10px;
+font-family: 'Poppins', sans-serif;
+}
+
+
+
 
 /* coming-soon-1 */
 
@@ -15,12 +117,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 31px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 
 .logo-container {
     margin-top: 30px;
     margin-bottom: 40px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 
@@ -30,7 +134,14 @@ body {
     font-size: 130px;
     margin-top: 20px;
     color: rgba(244, 0, 0, 1);
+    animation: bounce 2s infinite alternate;
 }
+
+.coming-soon:hover {
+    color: rgba(255, 102, 0, 1); /* Changes to orange */
+    text-shadow: 0 0 15px rgba(255, 102, 0, 0.8);
+}
+
 
 
 .gradient-line {
@@ -39,6 +150,7 @@ body {
     background: linear-gradient(to right, rgb(30, 30, 255), transparent, blue); 
     width: 80%;
     margin: 10px auto;
+    animation: shimmer 3s infinite alternate;
 }
 
 
@@ -48,6 +160,7 @@ body {
     line-height: 50px;
     font-family: 'Rubik', sans-serif;
     margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 
@@ -56,6 +169,7 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 60px;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 
@@ -66,8 +180,13 @@ body {
     justify-content: center;
     background: red;
     color: white;
-    min-width: 80px;
+    min-width: 120px;
 }
+
+.countdown-box:hover {
+    transform: scale(1.1);
+}
+
 
 
 .counter-line {
@@ -75,6 +194,11 @@ body {
     height: 2px;  /* Line thickness */
     background-color: white;  /* White color */
     margin: 10px auto;  /* Center alignment with spacing */
+}
+
+/* Hover Effect on Countdown Numbers */
+.countdown-box span:hover {
+    color: yellow;
 }
 
 
@@ -85,13 +209,13 @@ body {
     line-height: 64px;
     padding-left: 10px;
     padding-right: 10px;
+    animation: pulse 1.5s infinite alternate;
 }
 
 
 .countdown-box small {
     font-size: 24px;
     font-weight: 500;
-    margin-top: 10px;
     font-family: 'Poppins', sans-serif;
     padding-left: 10px;
     padding-right: 10px;
@@ -157,121 +281,117 @@ body {
 
 
 /* coming-soon-2 */
-.coming-soon-2  {
-    background: url("./assets/christmas-bg.webp");
-    text-align: center;
-    background-position: center;
+.coming-soon-2 {
+    background-image: url("./assets/coming soon-2.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    color: white;
-
+    background-position: center;
+    line-height: 0px;
 }
-
 .coming-soon-2-logo {
-    text-align: center;
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
+/* Coming Soon Title */
 .coming-soon-2-title {
-    font-size: 130px;
-    font-weight: 700;
+    font-size: 160px;
+    font-weight: 400;
+    animation: fadeIn 2s ease-in-out;
     font-family: 'Bricolage Grotesque', sans-serif;
-
+    color: white;
+    padding-top: 0px;
 }
 
-.come {
-    gap: 20px;
-    padding-top: 30px;
-    flex-wrap: wrap;
-}
-
-.snowman {
-    font-size: 80px;
-    display: inline-block;
-}
-
+/* Countdown Timer */
 .coming-soon-2-countdown {
     display: flex;
     justify-content: center;
-    margin-top: 110px;
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .coming-soon-2-countdown div {
-    padding: 15px;
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0 15px;
     border-right: 2px solid white;
+  padding: 15px;
+    text-align: center;
+    color: white;
 }
 
+.coming-soon-2-countdown span {
 
-.decoration > span {
+    font-size: 70px;
+    font-weight: 400;
+    color:white;
+    animation: pulse 1s infinite;
+    font-family: 'Cairo', sans-serif;
+}
+
+.snowflake {
     position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 10px;
+    user-select: none;
+    animation: fall linear infinite;
 }
 
-.tree {
-    top: 38%;
-    left: 22%;
-}
-.snowman {
-    top: 30%;
-    left: 53%;
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .coming-soon-2-title {
+        font-size: 14vw;
+    }
+    .coming-soon-2-countdown {
+        gap: 10px;
+    }
+    .coming-soon-2-countdown div {
+        min-width: 60px;
+        font-size: 16px;
+    }
+
+}
 
 @media (max-width: 768px) {
-    .coming-soon-2-title {
-        font-size: 10vw; 
+    .coming-soon-2-countdown {
+        gap: 5px;
+        padding-top: 50px;
     }
-
-    .come {
-        gap: 5vw; /* Reduce gap for small screens */
-    }
-
-    .snowman {
-        font-size: 12vw; /* Increase snowman size */
-    }
-
     .coming-soon-2-countdown div {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-    .tree {
-        top: 50%;
-        left: 5%;
-        width: 15vw;
-    }
-
-    .snowman {
-        top: 40%;
-        left: 50%;
+        font-size: 14px;
+        min-width: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .coming-soon-2-title {
-        font-size: 12vw;
+
+    .coming-soon-2-countdown {
+        padding-top: 30px;
     }
+     
 
-    .snowman {
-        font-size: 14vw;
+    .c {
+        height: 100px;
     }
-
-    /* .coming-soon-2-countdown {
-        flex-direction: column;
-    } */
-
-    .coming-soon-2-countdown div {
-        font-size: 1rem;
-        margin-bottom: 5px;
-    }
-
-    .tree, .snowman {
-        display: none; /* Hide decorations on very small screens */
+    #snow {
+        height: 80px;
     }
 }
 
@@ -283,9 +403,11 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 .coming-soon-3-logo {
-    padding-top: 50px;
+    padding-top: 30px;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .coming-soon-3-title {
@@ -299,13 +421,17 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
+    animation: bounce 2s infinite alternate;
 }
+
+
 .coming-soon-3-countdown {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
 }
 .coming-soon-3-countdown div {
     border: 5px solid red;
@@ -320,36 +446,49 @@ body {
     box-shadow: 4px 0px 0px red;
 } 
 
+.coming-soon-3-countdown div:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
 .coming-soon-3-countdown > div > span {
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
    font-weight: 800;
-
+   animation: pulse 1.5s infinite alternate;
 }
+
+.coming-soon-3-countdown div:hover span {
+    color: yellow;
+}
+
 .subscribe-box {
     background: #f8f9fa;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     border-radius: 10px;
     text-align: left;
     display: inline-block;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+
 }
 .subscribe-box input {
-    padding: 10px;
     border: 1px solid rgba(136, 136, 136, 1);
     border-left: none;
     border-radius: 5px;
+    height: 20px;
 }
 
-.email-input {
-    padding-left: 60px;
+
+.input-group-text > input{
+    border: none;
 } 
 
 .input-group-text {
     border: 1px solid rgba(136, 136, 136, 1);
     background-color: white;
     border-radius: 0%;
+    height: 40px;
 }
 
 
@@ -359,7 +498,15 @@ body {
     border: none;
     padding: 10px;
     border-radius: 0%;
+    height: 40px;
 }
+
+
+.subscribe-box button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
 .small-text {
     font-size: 16px;
     font-family: 'Nunito Sans', sans-serif;
@@ -389,6 +536,7 @@ body {
         font-size: 30px;
     }
 
+   
 }
 
 @media (max-width: 480px) {
@@ -404,9 +552,12 @@ body {
     .coming-soon-3-countdown > div > span {
         font-size: 30px;
     }
+    .subscribe-box button {
+        min-width: 100%;
+    }
 
-    .input-content {
-        flex-direction: column;
+    .input-group-text {
+        min-width: 100%;
     }
 
 }
@@ -419,56 +570,147 @@ body {
 
 .coming-soon-4-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
+
+
+/* Content Section */
 .content {
     max-width: 600px;
     text-align: left;
+    padding: 20px;
+    animation: bounce 2s infinite alternate;
 }
+
+
+/* Logo Centering */
 .logo {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInUp 2s ease-in-out;
 }
+
+
+.coming-soon-4-subscribe-box input:hover {
+    border-color: red;
+    box-shadow: 4px 4px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Subscribe Box */
 .coming-soon-4-subscribe-box {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
 }
+
 .coming-soon-4-subscribe-box input {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex: 1; /* Takes available space */
+    min-width: 200px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
 }
+
 .coming-soon-4-subscribe-box button {
     background-color: red;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
+    white-space: nowrap;
 }
+
+
+.coming-soon-4-subscribe-box button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* Illustration */
 .illustration img {
     max-width: 100%;
+    height: auto;
 }
 
+/* Responsive Text Styles */
 .content > p {
     font-family: 'Poppins', sans-serif;
-font-size: 24px;
-font-weight: 700;
-color:rgba(167, 167, 167, 1) ;
-
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(167, 167, 167, 1);
 }
 
 .content > h2 {
-font-family: 'Poppins', sans-serif;
-font-size: 64px;
-font-weight: 500;
-color:rgba(45, 45, 45, 1) ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: rgba(45, 45, 45, 1);
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .coming-soon-4-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .coming-soon-4-subscribe-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming-soon-4-subscribe-box input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .coming-soon-4-subscribe-box button {
+        width: 100%;
+    }
+
+    .content > h2 {
+        font-size: 48px;
+    }
+
+    .content > p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content > h2 {
+        font-size: 36px;
+    }
+
+    .content > p {
+        font-size: 18px;
+    }
+
+    .coming-soon-4-subscribe-box input {
+        font-size: 16px;
+    }
+
+    .coming-soon-4-subscribe-box button {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+}
+
 
 
 
@@ -491,14 +733,21 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .coming-soon-5-title {
     font-family: 'Poppins', sans-serif;
     font-size: 72px;
     font-weight: 700;
-    padding-top: 60px;
+    padding-top: 40px;
+    animation: bounce 2s infinite alternate;
 }
+
+.coming-soon-5-title:hover {
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
 
 .coming-soon-5-sub-title {
     font-family: 'Poppins', sans-serif;
@@ -514,13 +763,20 @@ color:rgba(45, 45, 45, 1) ;
     gap: 15px;
     padding-top: 50px;
     flex-wrap: wrap;
+    animation: fadeInUp 2s ease-in-out;
 }
+
 
 .numbers {
     font-family: 'Digital Numbers', sans-serif;
     font-size: 40px;
     font-weight: bold;
     color: red;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.numbers:hover {
+    transform: scale(1.1);
 }
 
 .coming-soon-5-countdown-box {
@@ -532,12 +788,17 @@ color:rgba(45, 45, 45, 1) ;
     height: 90px;
     border-radius: 8px;
     display: flex;
-   
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
 }
+
+.coming-soon-5-countdown-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px rgba(255, 0, 0, 0.8);
+}
+
+
 .countdown-label {
     font-family: 'Poppins', sans-serif;
     font-size: 20.35px;
@@ -547,15 +808,61 @@ color:rgba(45, 45, 45, 1) ;
 }
 
 /* Responsive Styling */
+@media (max-width: 992px) {
+    .coming-soon-5-title {
+        font-size: 56px;
+    }
+
+    .coming-soon-5-sub-title {
+        font-size: 20px;
+    }
+
+    .coming-soon-5-countdown-box {
+        font-size: 32px;
+    }
+
+    .countdown-label {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
-    .countdown-box {
+    .coming-soon-5-title {
+        font-size: 48px;
+    }
+
+    .coming-soon-5-sub-title {
+        font-size: 18px;
+    }
+
+    .coming-soon-5-countdown-box {
         font-size: 28px;
     }
+
     .countdown-label {
-        font-size: 12px;
+        font-size: 16px;
     }
-    h2 {
+}
+
+@media (max-width: 576px) {
+    .coming-soon-5-title {
+        font-size: 36px;
+    }
+
+    .coming-soon-5-sub-title {
+        font-size: 16px;
+    }
+
+    .coming-soon-5-countdown {
+        gap: 10px;
+    }
+
+    .coming-soon-5-countdown-box {
         font-size: 24px;
+    }
+
+    .countdown-label {
+        font-size: 14px;
     }
 }
 
@@ -572,7 +879,13 @@ color:rgba(45, 45, 45, 1) ;
      font-size: 54px;
     font-weight: 700;
     padding-top: 10px;
+    animation: bounce 2s infinite alternate;
 }
+
+.headline:hover {
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
 .subtext {
     font-family: 'Poppins', sans-serif;
     color: gray;
@@ -586,6 +899,7 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 .coming-soon-6-subscribe-box input {
     flex: 1;
@@ -594,6 +908,14 @@ color:rgba(45, 45, 45, 1) ;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
 }
+
+.coming-soon-6-subscribe-box input:hover,
+.coming-soon-6-subscribe-box input:focus {
+    border-color: red;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    outline: none;
+}
+
 .coming-soon-6-subscribe-box button {
     background: red;
     color: white;
@@ -602,13 +924,23 @@ color:rgba(45, 45, 45, 1) ;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
+
+.coming-soon-6-subscribe-box button:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
 .social-icons {
     margin-top: 20px;
 }
 .social-icons a {
-    color: black;
+    color: red;
     font-size: 20px;
     margin: 0 10px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
 }
 
 
@@ -687,6 +1019,7 @@ color:rgba(45, 45, 45, 1) ;
     flex-direction: column;
     padding: 20px;
     background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Title */
@@ -695,6 +1028,11 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 72px;
     font-weight: 600;
     padding-top: 20px;
+    animation: bounce 2s infinite alternate;
+}
+
+.launching:hover {
+    text-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
 }
 
 /* Countdown Container */
@@ -712,6 +1050,7 @@ color:rgba(45, 45, 45, 1) ;
     gap: 20px;
     border-radius: 10px;
     padding: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Digit Number Styling */
@@ -727,7 +1066,14 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: pulse 1.5s infinite alternate;
 }
+
+.digit:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 0, 0, 1));
+}
+
 
 /* Countdown Labels */
 .coming-soon-7-label {
@@ -764,6 +1110,14 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 16px;
 }
 
+.coming-soon-7-subscribe-box input:hover,
+.coming-soon-7-subscribe-box input:focus {
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+    outline: none;
+}
+
+
 /* Subscribe Button */
 .coming-soon-7-subscribe-box button {
     background: red;
@@ -773,6 +1127,11 @@ color:rgba(45, 45, 45, 1) ;
     border: none;
     font-size: 16px;
     cursor: pointer;
+}
+
+.coming-soon-7-subscribe-box button:hover {
+    background: darkred;
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
@@ -821,9 +1180,10 @@ color:rgba(45, 45, 45, 1) ;
     }
 
     .coming-soon-7-subscribe-box input {
-        max-width: 100%;
+        width: 100%;
         text-align: center;
     }
+    
 }
 
 @media (max-width: 576px) {
@@ -843,7 +1203,12 @@ color:rgba(45, 45, 45, 1) ;
 
     .launching-slogan {
         font-size: 16px;
+    } 
+    .coming-soon-7-subscribe-box input{
+        margin-bottom: 20px;
     }
+
+
 }
 
 
@@ -860,6 +1225,8 @@ color:rgba(45, 45, 45, 1) ;
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Title */
@@ -868,6 +1235,11 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 72px;
     font-weight: 600;
     padding-top: 20px;
+    animation: bounce 2s infinite alternate;
+}
+
+.launching-1:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8);
 }
 
 /* Countdown Container */
@@ -885,6 +1257,7 @@ color:rgba(45, 45, 45, 1) ;
     gap: 20px;
     border-radius: 10px;
     padding: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Digit Number Styling */
@@ -900,6 +1273,13 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: pulse 1.5s infinite alternate;
+}
+
+
+.digit:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 0, 0, 0.8));
 }
 
 /* Countdown Labels */
@@ -910,13 +1290,10 @@ color:rgba(45, 45, 45, 1) ;
     padding-top: 10px;
 }
 
-/* Slogan */
-.launching-slogan-1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    padding-top: 20px;
+.launching-slogan-1:hover {
+    color: rgba(255, 0, 0, 0.8);
 }
+
 
 /* Subscription Box */
 .coming-soon-8-logo-box {
@@ -927,6 +1304,19 @@ color:rgba(45, 45, 45, 1) ;
     padding-top: 30px;
     align-items: center;
 }
+
+.coming-soon-8-logo-box img:hover {
+    transform: scale(1.1);
+}
+
+.coming-soon-8-logo-box img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.coming-soon-8-logo-box img:hover {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(5000%) hue-rotate(-10deg);
+}
+
 
 
 /* Responsive Design */
@@ -1015,12 +1405,14 @@ color:rgba(45, 45, 45, 1) ;
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 31px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 
 .logo-container-blue {
     margin-top: 30px;
     margin-bottom: 40px;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 
@@ -1030,8 +1422,13 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 130px;
     margin-top: 20px;
     color: rgba(0, 43, 183, 1);
+    animation: bounce 2s infinite alternate;
 }
 
+
+.coming-soon-blue:hover {
+    text-shadow: 0px 0px 20px rgba(30, 144, 255, 0.8);
+}
 
 .gradient-line-blue {
     border: none;
@@ -1039,6 +1436,7 @@ color:rgba(45, 45, 45, 1) ;
     background: linear-gradient(to right, rgb(30, 30, 255), transparent, blue); 
     width: 80%;
     margin: 10px auto;
+    animation: shimmer 3s infinite alternate;
 }
 
 
@@ -1056,6 +1454,7 @@ color:rgba(45, 45, 45, 1) ;
     justify-content: center;
     gap: 20px;
     margin-top: 60px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 
@@ -1066,7 +1465,12 @@ color:rgba(45, 45, 45, 1) ;
     justify-content: center;
     background: rgba(0, 43, 183, 1);
     color: white;
-    min-width: 80px;
+    min-width: 120px;
+}
+
+.countdown-box-blue:hover {
+    transform: scale(1.1);
+    background: rgba(0, 60, 255, 1);
 }
 
 
@@ -1085,13 +1489,17 @@ color:rgba(45, 45, 45, 1) ;
     line-height: 64px;
     padding-left: 10px;
     padding-right: 10px;
+    animation: pulse 1.5s infinite alternate;
 }
 
+
+.countdown-box-blue span:hover {
+    transform: scale(1.1);
+}
 
 .countdown-box-blue small {
     font-size: 24px;
     font-weight: 500;
-    margin-top: 10px;
     font-family: 'Poppins', sans-serif;
     padding-left: 10px;
     padding-right: 10px;
@@ -1154,7 +1562,107 @@ color:rgba(45, 45, 45, 1) ;
 }
 
 
+/* coming-soon-2-blue */
 
+.coming-soon-2-blue {
+    background-image: url("./assets/coming soon-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    line-height: 0px;
+}
+.coming-soon-2-logo-blue {
+    padding-top: 80px;
+}
+
+/* Coming Soon Title */
+.coming-soon-2-title-blue {
+    font-size: 160px;
+    font-weight: 400;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: white;
+    padding-top: 18px;
+}
+
+/* Countdown Timer */
+.coming-soon-2-countdown-blue {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.coming-soon-2-countdown-blue div {
+    border-right: 2px solid white;
+  padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.coming-soon-2-countdown-blue span {
+
+    font-size: 70px;
+    font-weight: 400;
+    color:white;
+    animation: pulse 1s infinite;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .coming-soon-2-title-blue {
+        font-size: 12vw;
+    }
+    .coming-soon-2-countdown-blue {
+        gap: 10px;
+    }
+    .coming-soon-2-countdown-blue div {
+        min-width: 60px;
+        font-size: 16px;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .coming-soon-2-countdown-blue {
+        gap: 5px;
+        padding-top: 50px;
+    }
+    .coming-soon-2-countdown-blue div {
+
+        min-width: auto;
+    }
+ 
+}
+
+@media (max-width: 480px) {
+
+    .coming-soon-2-countdown-blue {
+        padding-top: 30px;
+    }
+    .c {
+        height: 100px;
+    }
+    #snow {
+        height: 80px;
+    }
+
+}
 
 
 /* coming-soon-3-blue */
@@ -1163,9 +1671,11 @@ color:rgba(45, 45, 45, 1) ;
     min-width: 100vw;
     min-height: 100vh;
     background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 .coming-soon-3-logo-blue {
-    padding-top: 50px;
+    padding-top: 30px;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .coming-soon-3-title-blue {
@@ -1179,13 +1689,20 @@ color:rgba(45, 45, 45, 1) ;
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
+    animation: bounce 2s infinite alternate;
 }
+
+.coming-soon-3-title-blue:hover {
+    text-shadow: 0px 0px 20px rgba(0, 43, 183, 0.8);
+}
+
 .coming-soon-3-countdown-blue {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 .coming-soon-3-countdown-blue div {
     border: 5px solid rgba(0, 43, 183, 1);
@@ -1200,36 +1717,57 @@ color:rgba(45, 45, 45, 1) ;
     box-shadow: 4px 0px 0px rgba(0, 43, 183, 1);
 } 
 
+.coming-soon-3-countdown-blue div:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 60, 255, 1);
+}
+
 .coming-soon-3-countdown-blue > div > span {
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
    font-weight: 800;
-
+   animation: pulse 1.5s infinite alternate;
 }
+
+
+.coming-soon-3-countdown-blue > div > span:hover {
+    transform: scale(1.1);
+}
+
 .subscribe-box-blue {
     background: #f8f9fa;
     padding: 20px;
-    margin-top: 30px;
     border-radius: 10px;
     text-align: left;
     display: inline-block;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
 }
 .subscribe-box-blue input {
     padding: 10px;
     border: 1px solid rgba(0, 43, 183, 1);
     border-left: none;
     border-radius: 5px;
+    height: 20px;
 }
 
 .email-input-blue {
     padding-left: 60px;
 } 
 
+.input-group-text-blue > input{
+    border: none;
+} 
+
+.subscribe-box-blue:hover {
+    box-shadow: 4px 4px 30px rgba(0, 43, 183, 0.4);
+}
+
 .input-group-text-blue {
     border: 1px solid rgba(0, 43, 183, 1);
     background-color: white;
     border-radius: 0%;
+    min-height: 40px;
 }
 
 
@@ -1239,7 +1777,14 @@ color:rgba(45, 45, 45, 1) ;
     border: none;
     padding: 10px;
     border-radius: 0%;
+    height: 40px;
 }
+
+.subscribe-box-blue button:hover {
+    background-color: rgba(0, 60, 255, 1);
+    box-shadow: 0px 0px 15px rgba(0, 43, 183, 0.8);
+}
+
 .small-text-blue {
     font-size: 16px;
     font-family: 'Nunito Sans', sans-serif;
@@ -1289,6 +1834,14 @@ color:rgba(45, 45, 45, 1) ;
         flex-direction: column;
     }
 
+    .subscribe-box-blue button {
+        width: 100%;
+    }
+
+    .input-group-text-blue {
+        width: 100%;
+    }
+
 }
 
 
@@ -1299,56 +1852,145 @@ color:rgba(45, 45, 45, 1) ;
 
 .coming-soon-4-container-blue {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
+
+/* Content Section */
 .content-blue {
     max-width: 600px;
     text-align: left;
+    padding: 20px;
+    animation: bounce 2s infinite alternate;
 }
+
+
+.content-blue:hover {
+    transform: scale(1.02);
+}
+/* Logo Centering */
 .logo-blue {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInUp 2s ease-in-out;
 }
+
+/* Subscribe Box */
 .coming-soon-4-subscribe-box-blue {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
+    animation: fadeIn 2s ease-in-out;
 }
+
 .coming-soon-4-subscribe-box-blue input {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex: 1; /* Takes available space */
+    min-width: 200px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
 }
+
 .coming-soon-4-subscribe-box-blue button {
-    background-color: rgba(0, 43, 183, 1);
+    background-color: red;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
+    white-space: nowrap;
 }
+
+
+
+.coming-soon-4-subscribe-box-blue button:hover {
+    background-color: darkred;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+}
+
+/* Illustration */
 .illustration-blue img {
     max-width: 100%;
+    height: auto;
 }
 
+/* Responsive Text Styles */
 .content-blue > p {
     font-family: 'Poppins', sans-serif;
-font-size: 24px;
-font-weight: 700;
-color:rgba(167, 167, 167, 1) ;
-
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(167, 167, 167, 1);
 }
 
 .content-blue > h2 {
-font-family: 'Poppins', sans-serif;
-font-size: 64px;
-font-weight: 500;
-color:rgba(45, 45, 45, 1) ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: rgba(45, 45, 45, 1);
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .coming-soon-4-container-blue {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-blue {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .coming-soon-4-subscribe-box-blue {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming-soon-4-subscribe-box-blue input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .coming-soon-4-subscribe-box-blue button {
+        width: 100%;
+    }
+
+    .content-blue > h2 {
+        font-size: 48px;
+    }
+
+    .content-blue > p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-blue > h2 {
+        font-size: 36px;
+    }
+
+    .content-blue > p {
+        font-size: 18px;
+    }
+
+    .coming-soon-4-subscribe-box-blue input {
+        font-size: 16px;
+    }
+
+    .coming-soon-4-subscribe-box-blue button {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+}
+
 
 
 
@@ -1365,6 +2007,7 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .coming-soon-5-title-blue {
@@ -1372,6 +2015,7 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 72px;
     font-weight: 700;
     padding-top: 60px;
+    animation: bounce 2s infinite alternate;
 }
 
 .coming-soon-5-sub-title-blue {
@@ -1380,6 +2024,9 @@ color:rgba(45, 45, 45, 1) ;
     font-weight: 400;
 }
 
+.coming-soon-5-title-blue:hover {
+    text-shadow: 0px 0px 20px rgba(0, 43, 183, 0.8);
+}
 
 /* Countdown Styling */
 .coming-soon-5-countdown-blue {
@@ -1388,6 +2035,7 @@ color:rgba(45, 45, 45, 1) ;
     gap: 15px;
     padding-top: 50px;
     flex-wrap: wrap;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .numbers-blue {
@@ -1395,6 +2043,11 @@ color:rgba(45, 45, 45, 1) ;
     font-size: 40px;
     font-weight: bold;
     color: rgba(0, 43, 183, 1);
+    animation: pulse 1.5s infinite alternate;
+}
+
+.numbers-blue:hover {
+    color: blue;
 }
 
 .coming-soon-5-countdown-box-blue {
@@ -1406,12 +2059,16 @@ color:rgba(45, 45, 45, 1) ;
     height: 90px;
     border-radius: 8px;
     display: flex;
-   
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
 }
+
+.coming-soon-5-countdown-box-blue:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.8);
+}
+
 .countdown-label-blue {
     font-family: 'Poppins', sans-serif;
     font-size: 20.35px;
@@ -1421,15 +2078,61 @@ color:rgba(45, 45, 45, 1) ;
 }
 
 /* Responsive Styling */
+@media (max-width: 992px) {
+    .coming-soon-5-title-blue {
+        font-size: 56px;
+    }
+
+    .coming-soon-5-sub-title-blue {
+        font-size: 20px;
+    }
+
+    .coming-soon-5-countdown-box-blue {
+        font-size: 32px;
+    }
+
+    .countdown-label-blue {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
-    .countdown-box-blue {
+    .coming-soon-5-title-blue {
+        font-size: 48px;
+    }
+
+    .coming-soon-5-sub-title-blue {
+        font-size: 18px;
+    }
+
+    .coming-soon-5-countdown-box-blue {
         font-size: 28px;
     }
+
     .countdown-label-blue {
-        font-size: 12px;
+        font-size: 16px;
     }
-    h2 {
+}
+
+@media (max-width: 576px) {
+    .coming-soon-5-title-blue {
+        font-size: 36px;
+    }
+
+    .coming-soon-5-sub-title-blue {
+        font-size: 16px;
+    }
+
+    .coming-soon-5-countdown-blue {
+        gap: 10px;
+    }
+
+    .coming-soon-5-countdown-box-blue {
         font-size: 24px;
+    }
+
+    .countdown-label-blue {
+        font-size: 14px;
     }
 }
 
@@ -1443,7 +2146,13 @@ color:rgba(45, 45, 45, 1) ;
      font-size: 54px;
     font-weight: 700;
     padding-top: 10px;
+    animation: bounce 2s infinite alternate;
 }
+
+.headline-blue:hover {
+    text-shadow: 0px 0px 10px rgba(0, 43, 183, 0.8);
+}
+
 .subtext-blue {
     font-family: 'Poppins', sans-serif;
     color: gray;
@@ -1457,6 +2166,7 @@ color:rgba(45, 45, 45, 1) ;
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 .coming-soon-6-subscribe-box-blue input {
     flex: 1;
@@ -1465,6 +2175,14 @@ color:rgba(45, 45, 45, 1) ;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
 }
+
+.coming-soon-6-subscribe-box-blue input:hover,
+.coming-soon-6-subscribe-box-blue input:focus {
+    border-color: rgba(0, 43, 183, 1);
+    box-shadow: 0px 0px 8px rgba(0, 43, 183, 0.5);
+    outline: none;
+}
+
 .coming-soon-6-subscribe-box-blue button {
     background: rgba(0, 43, 183, 1);
     color: white;
@@ -1473,15 +2191,24 @@ color:rgba(45, 45, 45, 1) ;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
+
+.coming-soon-6-subscribe-box-blue button:hover {
+    background: blue;
+    transform: scale(1.05);
+}
+
 .social-icons-blue {
     margin-top: 20px;
 }
 .social-icons-blue a {
-    color: black;
+    color: blue;
     font-size: 20px;
     margin: 0 10px;
 }
 
+.social-icons-blue a:hover {
+    transform: scale(1.2);
+}
 
 @media (max-width: 768px) {
     .headline-blue {
@@ -1554,6 +2281,7 @@ color:rgba(45, 45, 45, 1) ;
     flex-wrap: wrap;
     gap: 5px;
     padding-top: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Input Field */
@@ -1577,4 +2305,130 @@ color:rgba(45, 45, 45, 1) ;
     cursor: pointer;
 }
 
+.coming-soon-7-subscribe-box-blue input:hover,
+.coming-soon-7-subscribe-box-blue input:focus {
+    border: 2px solid rgba(0, 43, 183, 1);
+    box-shadow: 0px 0px 8px rgba(0, 43, 183, 0.5);
+    outline: none;
+}
 
+.coming-soon-7-subscribe-box-blue button:hover {
+    background: blue;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 480px)  {
+
+.coming-soon-7-subscribe-box input{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.coming-soon-7-subscribe-box-blue button {
+    width: 100%;
+}
+}
+
+/* coming-soon-8 */
+
+
+.coming-soon-8-logo-box-blue {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 30px;
+    align-items: center;
+}
+.coming-soon-8-logo-box-blue img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.coming-soon-8-logo-box-blue img:hover {
+    filter: brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(2000%) hue-rotate(200deg);
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200px; }
+    100% { background-position: 200px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(80vh);
+        opacity: 0;
+    }
+}
+
+/* Generate multiple snowflakes */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 5s; font-size: 15px; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 7s; font-size: 20px; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 6s; font-size: 25px; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 8s; font-size: 18px; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 5s; font-size: 22px; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 7s; font-size: 16px; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 6s; font-size: 24px; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 8s; font-size: 20px; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 5s; font-size: 19px; }
+.snowflake:nth-child(10) { left: 95%; animation-duration: 7s; font-size: 21px; }
