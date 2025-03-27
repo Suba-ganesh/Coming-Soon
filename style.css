@@ -300,7 +300,7 @@ font-family: 'Poppins', sans-serif;
     font-size: 160px;
     font-weight: 400;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
     padding-top: 0px;
 }
@@ -336,7 +336,7 @@ font-family: 'Poppins', sans-serif;
 
 /* Number Styling */
 .countdown-item span {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 50px;
     font-weight: 400;
     animation: pulse 2.5s infinite alternate;
@@ -350,7 +350,7 @@ font-family: 'Poppins', sans-serif;
 /* Label Styling */
 .small {
     margin-top: 40px; /* Reduced margin for better alignment */
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
@@ -546,14 +546,14 @@ font-family: 'Poppins', sans-serif;
 
 .small-text {
     font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: gray;
     margin-top: 15px;
     font-weight: 400;
 }
 
 .notified {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 700;
 }
@@ -1625,7 +1625,7 @@ font-family: 'Poppins', sans-serif;
     font-size: 160px;
     font-weight: 400;
     animation: fadeIn 2s ease-in-out;
-    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
     padding-top: 18px;
 }
@@ -1662,7 +1662,7 @@ font-family: 'Poppins', sans-serif;
 
 /* Number Styling */
 .countdown-item-blue span {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 50px;
     font-weight: 400;
     animation: pulse 2.5s infinite alternate;
@@ -1676,7 +1676,7 @@ font-family: 'Poppins', sans-serif;
 /* Label Styling */
 .small-blue {
     margin-top: 40px; /* Reduced margin for better alignment */
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
@@ -1854,14 +1854,14 @@ font-family: 'Poppins', sans-serif;
 
 .small-text-blue {
     font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: gray;
     margin-top: 15px;
     font-weight: 400;
 }
 
 .notified-blue {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 700;
 }
